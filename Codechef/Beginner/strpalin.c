@@ -18,12 +18,13 @@ int main(int argc, char *argv[]) {
 				}
 			}
 			if (isFound) {
-				printf("Yes\n");
-				break;
-			} else {
-				printf("No\n");
 				break;
 			}
+		}
+		if (isFound) {
+			printf("Yes\n");
+		} else {
+			printf("No\n");
 		}
 	}
 }

@@ -19,10 +19,11 @@ int main(int argc, char *argv[]) {
 			}
 			if (isFound) {
 				printf("Yes\n");
+				break;
 			} else {
 				printf("No\n");
+				break;
 			}
-			break;
 		}
 	}
 }

@@ -3,14 +3,31 @@
 
 void villagesAndTribes(char* input) {
 	int i = 0, j = 0;
-	for (i = 0; i < strlen(input); i++) {
+	int length = strlen(input);
+	int dotCounter = 0;
+	int aCounter = 0;
+	int aSum = 0;
+	int saveIndex = 0;
+	int firstState = 1;
+	for (i = saveIndex; i < length; i++) {
 		if (input[i] == 'A') {
-					
-		}
-		for (j = 0; j < strlen(input); j++) {
-			
+			if (firstState) {
+				aCounter++;
+			}
+			for (j = i + 1; j < length; j++) {
+				if (input[j] == 'A') {
+					aCounter++;
+					saveIndex = j;
+					firstState = 0;
+					break;
+				}
+				if (input[j] == '.') {
+					dotCounter++;
+				}
+			}
 		}
 	}
+	printf("%d %d", aCounter, dotCounter);
 }
 
 int main(int argc, char *argv[]) {

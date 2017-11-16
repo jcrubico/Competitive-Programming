@@ -10,7 +10,6 @@ int main(int argc, char *argv[]) {
 	int counterA = 0, counterB = 0;
 	int dotA = 0, dotB = 0;
 	int sumA = 0, sumB = 0;
-	int stateA = 0, stateB = 0;
 	for (i = 1; i <= T; i++) {
 		scanf("%s", data);
 		int stringLength = strlen(data);
@@ -62,18 +61,15 @@ int main(int argc, char *argv[]) {
 			}
 			printf("%d %d %d %d\n", counterA, dotA, counterB, dotB);
 		}
-		
 		dotA = 0;
 		foundA = 0;
 		sumA = 0;
 		counterA = 0;
-		stateA = 0;
 		
 		dotB = 0;
 		foundB = 0;
 		sumB = 0;
 		counterB = 0;
-		stateB = 0;
 	}
 }
 
